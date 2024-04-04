@@ -1,0 +1,82 @@
+@use "./vars"; 
+@import "./vars";
+
+.contact-us {
+    .hero-section {
+        //@include hero-section;
+        display: flex; /* Added */
+        justify-content: left; /* Added */
+        align-items: center; /* Added */
+        height: 55vh;
+        .grid-container {
+            justify-items: left; /* Updated */
+            align-items: center; /* Updated */
+            .grid-item {
+                padding: 0;
+                //text-align: center;
+                margin-top: 0;
+                padding-left: 5%;
+                @media only screen and (min-width: 1024px) {
+                    padding-left: 0;
+                }
+                .heading-primary {  
+                    color: map-get(vars.$colours, strong-white);
+                    @include mobile-responsive-font-size(map-get(vars.$font-sizes, font-size-30));
+                    justify-items: center; /* Updated */
+                    align-items: center; /* Updated */
+                    margin-bottom: 20%;
+                    @media only screen and (min-width: 1024px) {
+                        @include responsive-font-size(map-get(vars.$font-sizes, font-size-50));
+                        margin-bottom: 3%;
+                    }
+                }
+                .para-primary {
+                    color: map-get(vars.$colours, strong-white);
+                    @include mobile-responsive-font-size(map-get(vars.$font-sizes, font-size-16));
+                    padding: 0 10%;
+                    @media only screen and (min-width: 1024px) {
+                        @include responsive-font-size(map-get(vars.$font-sizes, font-size-30));
+                    }
+                }
+            }
+        }
+    }
+    
+    .map-section {
+        //@include map-section;
+    }
+
+    .contact-form {
+        //@include contact-form;
+    }
+
+    .jungle-background {
+        // @include jungle-background;
+    }
+    .outstanding-veterinary-care {
+        //@include outstanding-veterinary-care;
+    }
+    .bottom-logo {
+        //@include bottom-logo;
+    }
+}
+
+.contact-us .map-section .grid-container .grid-item:last-of-type > div:first-of-type {  
+    width: auto !important;
+    height: 32.3rem !important;
+    @media only screen and (min-width: 2560px) {
+        height: 80rem !important; 
+    }     
+    @media only screen and (min-width: 1920px) and (max-width: 2559.98px) {
+        height: 71.6rem !important; 
+    }
+    @media only screen and (min-width: 1440px) and (max-width: 1919.98px) {
+        height: 65rem !important;
+    }
+    @media only screen and (min-width: 1024px) and (max-width: 1439.98px) {
+        height: 60rem !important;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+        height: 55rem !important;
+    }
+}

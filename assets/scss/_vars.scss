@@ -1,0 +1,170 @@
+// Colours 
+
+$colours: (
+  white: #fff,
+  black: #000,
+  blue-1:#242933,
+  blue-2:#45557a,
+  gray-1:#F2F0EA,
+  strong-white:#E2DEDF,
+  gray-3:#00000029,
+  gray-4:#707070,
+  gray-5:#45484B,
+  gray-6:#6D7B84,
+  gold-1:#FBF287,
+  gold-2:#FFDA4E,
+  gold-3:#D9B451,
+  gold-4:#ECBA27,
+  gold-5:#F5BE20,
+  gold-6:#E5B402,
+  gold-7:#D8A628
+);
+
+$font-sizes: (
+  font-size-50: 5rem,
+  font-size-40: 4rem,
+  font-size-36: 3.6rem,
+  font-size-35: 3.5rem,
+  font-size-30: 3rem,
+  font-size-28: 2.8rem,
+  font-size-27: 2.7rem,
+  font-size-26: 2.6rem,
+  font-size-24: 2.4rem,
+  font-size-22: 2.2rem,
+  font-size-20: 2rem,
+  font-size-18: 1.8rem,
+  font-size-16: 1.6rem,
+  font-size-15: 1.5rem,
+  font-size-14: 1.4rem,
+  font-size-12: 1.2rem,
+  font-size-11: 1.1rem,
+  font-size-10: 1rem
+);
+
+@mixin responsive-font-size($font-size) {
+  font-size: $font-size;
+  @media only screen and (min-width: 1024px) and (max-width: 1439.98px) {
+    font-size: ($font-size * 0.65);
+  }
+  @media only screen and (min-width: 1440px) and (max-width: 1919.98px) {
+    font-size: ($font-size * .8);
+  }
+  @media only screen and (min-width: 1920px) and (max-width: 2559.98px) {
+    font-size: ($font-size * 1);
+  }
+  @media only screen and (min-width: 2200px) {
+    font-size: ($font-size * 1.25);
+  }
+}
+
+@mixin mobile-responsive-font-size($font-size) {
+  font-size: $font-size;
+
+  @media only screen and (min-width: 320px) and (max-width: 372.98px) {
+    font-size: ($font-size * 0.8);
+  }
+
+  @media only screen and (min-width: 375px) and (max-width: 424.98px) {
+    font-size: $font-size;
+  }
+
+  @media only screen and (min-width: 425px) and (max-width: 548.98px) {
+    font-size: ($font-size * 1.1);
+  }
+
+  @media only screen and (min-width: 549px) and (max-width: 767.98px) {
+    font-size: ($font-size * 1.25);
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+    font-size: ($font-size * 1.5);
+  }
+}
+
+@mixin proxima-nova-light {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin proxima-nova-light-italic {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@mixin proxima-nova-regular {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin proxima-nova-regular-italic {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin proxima-nova-semi-bold {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin proxima-nova-semi-bold-italic {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+@mixin proxima-nova-bold {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin proxima-nova-bold-italic {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@mixin light-bold-italic-heading {
+  span {
+      &:first-of-type {
+          @include proxima-nova-light;
+      }
+
+      &:last-of-type {
+          @include proxima-nova-bold-italic;
+      }
+  }
+}
+
+
+@mixin horizontal-white {
+  height: .2rem;
+  color: map-get($colours, strong-white);
+  background-color: map-get($colours, strong-white);
+  opacity: 1;
+  width: 40%;
+  margin-top: 2rem;
+
+  @media only screen and (min-width: 1024px) {
+      height: .3rem;
+      width: 27.5%;
+  }
+}
+
+@mixin horizontal-blue {
+  color: map-get($colours, blue-1);
+  height: .2rem;
+  background-color: map-get($colours, blue-1);
+  opacity: 1;
+  width: 40%;
+  margin-top: 2rem;
+
+  @media only screen and (min-width: 1024px) {
+      height: .3rem;
+      width: 27.5%;
+  }
+}

@@ -1,0 +1,43 @@
+@use "./vars";
+@import "./vars";
+
+.our-philosophy {
+    .hero-section {
+        //@include hero-section;
+        background-image: url('../img/stock-images/philosophy-hero-mobile.jpg');
+        @media only screen and (min-width: 768px) {
+            background-image: url('../img/stock-images/about-hero.jpeg');
+            background-position: center;
+        }
+    }
+    
+    .intro {
+        //@include info-section;
+        background-color: map-get(vars.$colours, strong-white);
+        color: map-get(vars.$colours, blue-1);
+        padding: 25% 7.5%;
+    }
+    
+    .background-dogs {
+        //@include background-dogs;
+    }
+    
+    .info-section {
+        //@include info-section;
+        background-color: map-get(vars.$colours, strong-white);
+        color: map-get(vars.$colours, blue-1);
+        padding: 25% 7.5%;
+    }
+
+    .leafy-background {
+        //@include leafy-background;
+    }
+
+    .outstanding-veterinary-care {
+        //@include outstanding-veterinary-care;
+    }
+
+    .bottom-logo {
+        //@include bottom-logo;
+    }
+}

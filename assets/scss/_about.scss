@@ -1,0 +1,59 @@
+@use "./vars";
+@import "./vars";
+
+.about-us {
+    .hero-section {
+        //@include hero-section;
+        background-image: url('../img/bespoke-images/WhatsApp Image 2023-05-07 at 10.26.50.jpg');
+    }
+
+    .intro {
+        //@include info-section;
+        background-color: map-get($colours, blue-1);
+        .heading-secondary {
+            color: map-get($colours, gold-3);
+        }
+        .para-primary {
+            color: map-get(vars.$colours, strong-white);
+        }
+    }
+
+    .background-dogs {
+        //@include background-dogs;
+    }
+
+    .about-the-practice {
+        //@include info-section;
+        background-color: map-get($colours, gray-1);
+        // padding: 7% 20%; 
+        @media only screen and (min-width: 1920px) and (max-width: 2559.98px) {
+                padding: 8% 20% 6%;
+        }
+        .heading-secondary {
+            color: map-get($colours, gold-3);
+        }
+        .para-primary {
+            color: map-get($colours, blue-1);
+        }
+    }
+    .image-gallery {
+        //@include image-gallery;
+    }
+    
+    .about-the-team {
+        //@include about-the-team;
+    }
+
+    .jungle-background {
+        //@include jungle-background;
+    }
+
+    .outstanding-veterinary-care {
+        //@include outstanding-veterinary-care;
+    }
+
+    .bottom-logo {
+        //@include bottom-logo;
+    }
+
+}

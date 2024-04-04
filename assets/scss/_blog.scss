@@ -1,0 +1,104 @@
+@use "./vars";
+@import "./vars";
+
+.blog-page, .basic-page {
+    .hero-section {
+        //@include hero-section;
+        background-color: map-get(vars.$colours, blue-1);
+        //display: flex; /* Added */
+        // justify-content: center; /* Added */
+        // align-items: center; /* Added */
+        min-height: 0 !important;
+        padding: 20% 0 10%;
+        @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+            padding: 35% 0 10%;
+        }
+        @media only screen and (min-width: .1px) and (max-width: 767.98px) {
+            padding: 60% 0 25%;            
+        }
+        &:after {
+            height: 0;
+        }
+        .grid-container {
+            // justify-items: center; /* Updated */
+            // align-items: center; /* Updated */
+            .grid-item {
+                padding: 0;
+                text-align: center;
+                margin: 0;
+                .heading-primary {  
+                    color: map-get(vars.$colours, gold-3);
+                    @include mobile-responsive-font-size(map-get(vars.$font-sizes, font-size-30));
+                    @include light-bold-italic-heading;
+                    justify-items: center; /* Updated */
+                    align-items: center; /* Updated */
+                    margin-bottom: 10%;
+                    @media only screen and (min-width: 1024px) {
+                        @include responsive-font-size(map-get(vars.$font-sizes, font-size-40));
+                        margin-bottom: 3%;
+                    }
+
+                    @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+                        margin-bottom: 5%;
+                    }
+                    span {
+                        display: inline-block;
+                    }
+                }
+                .para-primary {
+                    color: map-get(vars.$colours, strong-white);
+                    @include mobile-responsive-font-size(map-get(vars.$font-sizes, font-size-16));
+                    @include proxima-nova-light;
+                    padding: 0 20%;
+                    @media only screen and (min-width: 1024px) {
+                        @include responsive-font-size(map-get(vars.$font-sizes, font-size-30));
+                    }
+
+                    @media only screen and (min-width: .1px) and (max-width: 767.98px) {
+                        padding: 0 5%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .ww-news {
+        @media only screen and (min-width: 2560px) {
+            padding: 5% 0 !important ;
+        }
+        @media only screen and (min-width: 1024px) and (max-width: 2559.98px){
+            padding: 9% 0 !important ;
+        }
+        @media only screen and (min-width: .1px) and (max-width: 1023.98px) {
+            padding: 25% 0 0 0 !important;
+        }
+//@include ww-news;
+        background-color: map-get(vars.$colours, gray-1);
+        .grid-container {
+            .grid-item.heading {
+                display: none;
+            }
+            .grid-item.content {
+                margin-top: 0;
+            }
+            .horizontal {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    .leafy-background {
+        //@include leafy-background
+    }
+    
+    .outstanding-veterinary-care {
+        //@include outstanding-veterinary-care;
+        @media only screen and (min-width: 1024px) {
+            padding-top: 10% !important;
+        }
+    }
+    
+    .bottom-logo {
+        //@include bottom-logo;
+    }
+}

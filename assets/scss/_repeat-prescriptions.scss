@@ -1,0 +1,11 @@
+@use "./vars"; 
+@import "./vars";
+
+.page-template-template-prescriptions{
+    .intro{
+        background-color: #242933;
+        .para-primary {
+            color: #E2DEDF;
+        }
+    } 
+}

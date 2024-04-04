@@ -1,0 +1,99 @@
+@use "./vars";
+@import "./vars";
+
+.services-page {
+    .hero-section {
+        //@include hero-section;
+        //background-image: url('../img/bespoke-images/WhatsApp Image 2023-05-07 at 10.26.50.jpg');
+    }
+
+    .intro-section {
+        //@include info-section;
+        padding: 35% 10% 10% 10% !important;
+        background-color: map-get(vars.$colours, blue-1);
+        @media only screen and (min-width: 1024px) {
+            padding: 10% 20% 10% !important;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+            padding: 15% 10% 10% 10% !important;
+        }
+        .heading-secondary {
+            color: map-get(vars.$colours, gold-3);
+            
+            @media only screen and (min-width: 1024px) {
+                text-align: center;
+                //margin-bottom: 2%;
+            }
+        }
+        .para-primary {
+            color: map-get(vars.$colours, white);
+            margin-bottom: 20%;
+            @media only screen and (min-width: 1024px) {
+                margin: 5% 0;
+            }
+        }
+        .inner-grid {
+            @media only screen and (min-width: 1024px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 2rem;
+                //padding: 2% 5%;
+            }
+            @media only screen and (min-width: .1px) and (max-width: 1023.98px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                padding: 2% 5%;
+            }
+            .link-box-link {
+                //@include link-box;
+                @media only screen and (min-width: 768px) {
+                    margin-right: 2.5% !important;
+                }
+    
+                .link-box {
+
+                    span { 
+                        @include mobile-responsive-font-size(map-get(vars.$font-sizes, font-size-11));
+                        @media only screen and (min-width: 1024px) {
+                            @include responsive-font-size(map-get(vars.$font-sizes, font-size-20));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
+        background-color: map-get(vars.$colours, blue-1);
+        //@include about-the-team;
+        .tab-content{
+            padding-bottom: 5%;
+            .grid-row {
+                margin-bottom: 35%;
+    
+    
+                @media only screen and (min-width: 1024px) {
+    
+                    margin: 0 5% 15%;
+    
+                }
+            }
+
+        }
+       
+    }
+
+    .jungle-background {
+        //@include jungle-background
+    }
+
+    .outstanding-veterinary-care {
+        //@include outstanding-veterinary-care;
+    }
+
+    .bottom-logo {
+        //@include bottom-logo;
+    }
+}

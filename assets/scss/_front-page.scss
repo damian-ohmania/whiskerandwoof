@@ -1,0 +1,242 @@
+@use "./vars";
+@import "./vars";
+
+// All includes found in _global.scss
+
+.front-page {
+    .hero-section {
+        //@include hero-section;
+        //background-image: url('../img/bespoke-images/WhatsApp Image 2023-05-07 at 10.26.50.jpg');
+
+        .grid-container {
+            .grid-item {
+
+                @media only screen and (min-width: 1024px) {
+                    //width: 50%;
+                }
+
+                @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+                    margin-left: 5%;
+                }
+
+                @media only screen and (min-width: 549px) and (max-width: 767.98.98px) {
+                    margin-left: 5%;
+                }
+
+                .heading-primary {
+                    color: map-get(vars.$colours, white);
+                    margin-bottom: 15%;
+                    @include proxima-nova-light;
+                    @media only screen and (min-width: 1024px) {
+                        display: block;
+                        margin-bottom: 0;
+                    }
+
+                    @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+                        margin: 0;
+                    }
+                    em {
+                        font-weight: 400;
+                        strong {
+                            text-shadow: 4px 14px 6px rgba(0, 0, 0, 0.4);
+                        }
+                    }
+
+
+                    .light {
+                        @include proxima-nova-light;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+                    }
+
+                    .italic {
+                        @include proxima-nova-semi-bold-italic;
+
+                        &::last-of-type {
+                            display: block;
+                        }
+                    }
+                }
+
+                .link-box-link {
+                    //@include link-box;
+
+                    @media only screen and (min-width: 1024px) {
+                        margin: 6% 0;
+
+                        &:first-of-type {
+                            margin-right: 2rem;
+                        }
+                    }
+
+                    @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+                        margin: 8% 0;
+
+                        &:first-of-type {
+                            margin-right: 2rem;
+                        }
+                    }
+
+                    @media only screen and (min-width: .1px) and (max-width: 767.98px) {
+                        margin: 10% 0;
+
+                        &:first-of-type {
+                            margin: 10% 0;
+                        }
+
+                        &:last-of-type {
+                            margin-bottom: 9%;
+                            margin-top: 13%;
+                        }
+                    }
+
+
+                    .link-box {
+                        display: inline-block;
+                        // padding: 1.25rem;
+                        // border: solid .2rem white;
+                        // border-radius: 0 1.5rem 0 1.5rem;
+                        min-width: 13rem;
+
+                        @media only screen and (min-width: 1024px) {
+                            padding: 1rem 2rem;
+                            border-radius: 0 2rem 0 2rem;
+                        }
+
+                        @media only screen and (min-width: 549px) and (max-width: 767.98px) {
+                            min-width: 16rem;
+                        }
+
+                        @media only screen and (min-width: 425px) and (max-width: 548.98px) {
+                            min-width: 14rem;
+                        }
+
+                        @media only screen and (min-width: .1px) and (max-width: 374.98px) {
+                            min-width: 11rem;
+                        }
+
+                        span {
+                            //opacity: .7;
+                            @include mobile-responsive-font-size(map-get(vars.$font-sizes, font-size-12));
+                            @include proxima-nova-semi-bold-italic;
+
+                            @media only screen and (min-width: 1024px) {
+                                @include responsive-font-size(map-get(vars.$font-sizes, font-size-20));
+                            }
+                        }
+                    }
+                }
+
+                .horizontal {
+                    margin-top: 12.5%;
+                    height: .3rem;
+                    width: 50%;
+
+                    @media only screen and (min-width: 1024px) {
+                        width: 25%;
+                        margin-top: 1rem;
+                    }
+
+                    @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+                        margin-top: 1rem;
+                        width: 30%
+                    }
+                }
+
+            }
+        }
+    }
+
+    .why-ww {
+        //@include why-ww;
+
+        .grid-container {
+            .grid-item {
+                &:last-of-type {
+                    .para-secondary {
+                        @include proxima-nova-light-italic;
+                        color: map-get(vars.$colours, strong-white);
+                    }
+
+                    .horizontal {
+                        @include horizontal-white;
+                    }
+                }
+            }
+        }
+    }
+
+    .your-ww-services {
+        //@include your-ww-services;
+    }
+
+    .info-box-w-background {
+        //@include info-box-w-background;
+    }
+
+    .your-team {
+        //@include your-team;
+    }
+    // Code Below is maily tempory due to the news section being removed
+    .outstanding-veterinary-care {
+        //@include outstanding-veterinary-care;
+        background-color: map-get(vars.$colours, gray-1);
+
+        @media only screen and (min-width: 1024px) {
+            padding: 10%;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1023.98px) {
+            height: 155rem;
+        }
+        @media only screen and (min-width: 549px) and (max-width: 767.98px) {
+            height: 120rem;
+        }
+        @media only screen and (min-width: 425px) and (max-width: 548.98px) {
+            height: 95rem;
+        }
+        @media only screen and (min-width: 375px) and (max-width: 424.98px) {
+            height: 85rem;
+        }
+        @media only screen and (min-width: .1px) and (max-width: 374.98px) {
+            height: 70rem;
+        }
+        .grid-container {
+            @media only screen and (min-width: 375px) and (max-width: 424.98px) {
+                //top: 30%;
+            } 
+            @media only screen and (min-width: .1px) and (max-width: 1023.98px) {
+                top: 30%;
+            } 
+        }
+    }
+
+    .jungle-background {
+        //@include jungle-background;
+    }
+
+    .ww-news {
+        //@include ww-news;
+        display: none;
+        .horizontal {
+            @include horizontal-blue;
+            margin-top: 10%;
+
+            @media only screen and (min-width: 2560px) {
+                margin-left: 7.5% !important;
+            }
+
+            @media only screen and (min-width: 1024px) {
+                width: 35%;
+                margin-left: 8%;
+            }
+        }
+    }
+
+    .bottom-logo {
+        //@include bottom-logo;
+        padding: 20%;
+        @media only screen and (min-width: 1024px) {
+            padding: 20%;
+        }
+    }
+}

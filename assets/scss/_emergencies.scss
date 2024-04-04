@@ -1,0 +1,114 @@
+@use "./vars";
+@import "./vars";
+
+.emergancies {
+    .hero-section {
+        //@include hero-section;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 55vh;
+
+        .grid-container {
+            justify-items: left;
+            /* Updated */
+            align-items: center;
+
+            /* Updated */
+            .grid-item {
+                // padding: 0;
+                // text-align: center;
+                // margin-top: 0;
+                //padding-left: 10%;
+
+                .heading-primary {
+                    color: map-get(vars.$colours, strong-white);
+                    @include mobile-responsive-font-size(map-get(vars.$font-sizes, font-size-30));
+                    justify-items: center;
+                    /* Updated */
+                    align-items: center;
+                    /* Updated */
+                    margin-bottom: 10%;
+
+                    @media only screen and (min-width: 1024px) {
+                        @include responsive-font-size(map-get(vars.$font-sizes, font-size-50));
+                        margin-bottom: 3%;
+                    }
+                }
+
+                .para-primary {
+                    color: map-get(vars.$colours, strong-white);
+                    @include mobile-responsive-font-size(map-get(vars.$font-sizes, font-size-16));
+                    padding: 0 10%;
+
+                    @media only screen and (min-width: 1024px) {
+                        @include responsive-font-size(map-get(vars.$font-sizes, font-size-30));
+                    }
+                }
+            }
+        }
+    }
+
+    .intro {
+        //@include why-ww;
+
+        .grid-container {
+            @media only screen and (min-width: 1024px) {
+                grid-template-rows: 1fr;
+            }
+
+            .grid-item {
+                margin-bottom: 0;
+
+                &:first-of-type {
+                    @media only screen and (min-width: 1024px) {
+                        height: 100%;
+                        max-height: 999rem;
+                    }
+
+                    .img-fluid {
+                        @media only screen and (min-width: 1024px) {
+                            height: 100%;
+                        }
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    margin: 0;
+
+                    .para-primary {
+                        span {
+                            display: block;
+
+                            &:first-of-type,
+                            &:nth-of-type(2) {
+                                margin-bottom: 10%;
+                            }
+                        }
+
+                        ul {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            display: block;
+                            margin-bottom: 10%;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .jungle-background {
+        //@include jungle-background;
+    }
+    .outstanding-veterinary-care {
+        //@include outstanding-veterinary-care;
+    }
+
+    .bottom-logo {
+        // /@include bottom-logo
+    }
+
+}

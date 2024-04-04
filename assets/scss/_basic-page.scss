@@ -1,0 +1,19 @@
+@use "./vars";
+
+.basic-page {
+    .hero-section { 
+        height: auto !important;
+        .grid-item {
+            text-align: left !important;
+            .heading-primary {
+                padding: 0 20%;
+                @media only screen and (min-width: .1px) and (max-width: 767.98px) {
+                    padding: 0 5%;
+                }
+            }
+        }
+        ol, ul {
+            margin: 5% 0 !important;
+        }
+    }
+}

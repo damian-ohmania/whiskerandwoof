@@ -1,0 +1,48 @@
+@use "./vars";
+@use "./global";
+@use "./front-page";
+@use "./header";
+@use "./footer";
+@use "./about";
+@use "./blog";
+@use "./contact";
+@use "./emergencies";
+@use "./health-plan";
+@use "./our-philosophy";
+@use "./out-of-hours";
+@use "./services";
+@use "./single-blog";
+@use "./basic-page";
+@use "./repeat-prescriptions";
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    outline: none;
+}
+:focus{
+    outline: none !important;
+}
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    font-family: arial;
+    font-weight: 400; 
+    line-height: 1;
+    opacity: 1; 
+    color: #000; 
+    h1, h2, h3, h4, h5, h6, p, span, div {
+        margin: 0; 
+        padding: 0;
+    }
+}
+.post, .page{
+    margin: 0 !important;
+}
+
+.no-scroll {
+    overflow: hidden;
+  }
