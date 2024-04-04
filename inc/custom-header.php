@@ -8,7 +8,7 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Whikser&Woof
+ * @package whisker&Woof
  */
 
 /**
@@ -20,14 +20,14 @@ function whiskerwoof_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'whikserwoof_custom_header_args',
+			'whiskerwoof_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'whikserwoof_header_style',
+				'wp-head-callback'   => 'whiskerwoof_header_style',
 			)
 		)
 	);
@@ -38,7 +38,7 @@ if ( ! function_exists( 'whiskerwoof_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see whikserwoof_custom_header_setup().
+	 * @see whiskerwoof_custom_header_setup().
 	 */
 	function whiskerwoof_header_style() {
 		$header_text_color = get_header_textcolor();

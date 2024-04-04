@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Whikser&Woof
+ * @package whisker&Woof
  */
 get_header();
 ?>

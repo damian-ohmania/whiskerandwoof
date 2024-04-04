@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Whikser&Woof
+ * @package whisker&Woof
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function whikserwoof_jetpack_setup() {
+function whiskerwoof_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'whikserwoof_infinite_scroll_render',
+			'render'    => 'whiskerwoof_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function whikserwoof_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'whikserwoof-style',
+				'stylesheet' => 'whiskerwoof-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,13 +48,13 @@ function whikserwoof_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'whikserwoof_jetpack_setup' );
+add_action( 'after_setup_theme', 'whiskerwoof_jetpack_setup' );
 
-if ( ! function_exists( 'whikserwoof_infinite_scroll_render' ) ) :
+if ( ! function_exists( 'whiskerwoof_infinite_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function whikserwoof_infinite_scroll_render() {
+	function whiskerwoof_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :

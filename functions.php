@@ -1,15 +1,15 @@
 <?php
 /**
- * Whikser&Woof functions and definitions
+ * whisker&Woof functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Whikser&Woof
+ * @package whisker&Woof
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '1.0.1' );
 }
 
 /**
@@ -19,14 +19,14 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function whikserwoof_setup() {
+function whiskerwoof_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on Whikser&Woof, use a find and replace
-		* to change 'whikserwoof' to the name of your theme in all the template files.
+		* If you're building a theme based on whisker&Woof, use a find and replace
+		* to change 'whiskerwoof' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain( 'whikserwoof', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'whiskerwoof', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -49,7 +49,7 @@ function whikserwoof_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'whikserwoof' ),
+			'menu-1' => esc_html__( 'Primary', 'whiskerwoof' ),
 		)
 	);
 
@@ -74,7 +74,7 @@ function whikserwoof_setup() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'whikserwoof_custom_background_args',
+			'whiskerwoof_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -100,7 +100,7 @@ function whikserwoof_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'whikserwoof_setup' );
+add_action( 'after_setup_theme', 'whiskerwoof_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -109,22 +109,22 @@ add_action( 'after_setup_theme', 'whikserwoof_setup' );
  *
  * @global int $content_width
  */
-function whikserwoof_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'whikserwoof_content_width', 640 );
+function whiskerwoof_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'whiskerwoof_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'whikserwoof_content_width', 0 );
+add_action( 'after_setup_theme', 'whiskerwoof_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function whikserwoof_widgets_init() {
+function whiskerwoof_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'whikserwoof' ),
+			'name'          => esc_html__( 'Sidebar', 'whiskerwoof' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'whikserwoof' ),
+			'description'   => esc_html__( 'Add widgets here.', 'whiskerwoof' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -132,26 +132,26 @@ function whikserwoof_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'whikserwoof_widgets_init' );
+add_action( 'widgets_init', 'whiskerwoof_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function whikserwoof_scripts() {
-	wp_enqueue_style( 'whikserwoof-style', get_stylesheet_uri(), array(), _S_VERSION );
+function whiskerwoof_scripts() {
+	wp_enqueue_style( 'whiskerwoof-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
-	wp_style_add_data( 'whikserwoof-style', 'rtl', 'replace' );
+	wp_style_add_data( 'whiskerwoof-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'whikserwoof-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'whiskerwoof-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'gsap-core', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'gsap-scrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js', array(), _S_VERSION, true ); 
 	wp_enqueue_script( 'gsap-scrollTo', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'whikserwoof-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'whiskerwoof-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'whikserwoof_scripts' );
+add_action( 'wp_enqueue_scripts', 'whiskerwoof_scripts' );
 
 /**
  * Implement the Custom Header feature.
